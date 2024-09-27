@@ -67,7 +67,7 @@ window.onload = function () {
 	document.body.appendChild(css)
 
 	var slider1 = tns({
-		container: ".my-slider",
+		container: ".my-slider1",
 		items: 6,
 		slideBy: "page",
 		autoplay: true,
@@ -79,6 +79,17 @@ window.onload = function () {
 
 	var slider2 = tns({
 		container: ".my-slider2",
+		items: 6,
+		slideBy: "page",
+		autoplay: true,
+		autoWidth: true,
+		nav: false,
+		controls: false,
+		autoplayButtonOutput: false,
+	})
+
+	var slider3 = tns({
+		container: ".my-slider3",
 		items: 6,
 		slideBy: "page",
 		autoplay: true,
