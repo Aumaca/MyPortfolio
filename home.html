@@ -178,7 +178,24 @@
 							</div>
 
 							<div class="content bg-white p-3 rounded-bl-lg rounded-br-lg">
-								<h3 class="text-lg font-bold">{{project.name}}</h3>
+								<a
+									v-if="project.url"
+									:href="project.url"
+									target="_blank"
+								>
+									<div class="flex items-center gap-2">
+										<h3 class="text-lg font-bold">{{project.name}}</h3>
+										<i
+											v-if="project.url"
+											class="fa-solid fa-arrow-up-right-from-square text-sm"
+										></i>
+									</div>
+								</a>
+								<div v-else>
+									<div class="flex items-center gap-2">
+										<h3 class="text-lg font-bold">{{project.name}}</h3>
+									</div>
+								</div>
 
 								<!-- Tags -->
 								<div class="tags flex py-3">
@@ -215,6 +232,7 @@
 						projects: [
 							{
 								name: "AnimeRank",
+								url: "https://aumaca-animerank.vercel.app/",
 								badges: [
 									"https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black",
 									"https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white",
@@ -251,15 +269,8 @@
 									"https://img.shields.io/badge/SQLite-07405E?style=for-the-badge&logo=sqlite&logoColor=white",
 									"https://img.shields.io/badge/Google_Drive-4285F4?style=for-the-badge",
 								],
-								desktopImages: [
-									"assets/slider1/1.png",
-									"assets/slider1/2.png",
-									"assets/slider1/3.png",
-									"assets/slider1/4.png",
-									"assets/slider1/5.png",
-									"assets/slider1/6.png",
-								],
-								mobileImages: ["assets/slider1/7.png"],
+								desktopImages: ["assets/slider2/1.png"],
+								mobileImages: ["assets/slider2/1.png"],
 								description: `
 									<p>My first app to be launched in Google Play Store, a digital diary app made using Flutter.</p>
 									<br>
@@ -274,14 +285,20 @@
 							},
 							{
 								name: "Truth Table Generator",
+								url: "https://aumaca.github.io/Truth-Table-Generator/",
 								badges: [
 									"https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black",
 									"https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white",
 									"https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white",
 									"https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white",
 								],
-								desktopImages: ["assets/slider2/1.png"],
-								mobileImages: ["assets/slider1/7.png"],
+								desktopImages: [
+									"assets/slider3/1.png",
+									"assets/slider3/2.png",
+									"assets/slider3/3.png",
+									"assets/slider3/4.png",
+								],
+								mobileImages: ["assets/slider3/5.png", "assets/slider3/6.png"],
 								description: `
 									<p>I developed a basic Truth Table Generator that constructs truth tables for AND, OR, conditional, and negation operations.</p>
 									<br>
@@ -292,12 +309,21 @@
 							},
 							{
 								name: "Shell Password Manager",
+								url: "https://github.com/Aumaca/Shell-Password-Manager",
 								badges: [
 									"https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=whitek",
 									"https://img.shields.io/badge/SQLite-07405E?style=for-the-badge&logo=sqlite&logoColor=white",
 								],
-								desktopImages: ["assets/slider2/1.png"],
-								mobileImages: ["assets/slider1/7.png"],
+								desktopImages: [
+									"assets/slider4/1.png",
+									"assets/slider4/2.png",
+									"assets/slider4/3.png",
+									"assets/slider4/4.png",
+									"assets/slider4/5.png",
+									"assets/slider4/6.png",
+									"assets/slider4/7.png",
+								],
+								mobileImages: [],
 								description: `
 									<p>I was curious about how to really build a password manager, that can unlock one password with another.</p>
 									<br>
@@ -306,6 +332,7 @@
 							},
 							{
 								name: "Chess",
+								url: "https://aumaca.github.io/Chess-Game/",
 								badges: [
 									"https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black",
 									"https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white",
@@ -313,8 +340,16 @@
 									"https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white",
 									"https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB",
 								],
-								desktopImages: ["assets/slider2/1.png"],
-								mobileImages: ["assets/slider1/7.png"],
+								desktopImages: [
+									"assets/slider6/1.png",
+									"assets/slider6/2.png",
+									"assets/slider6/3.png",
+									"assets/slider6/4.png",
+								],
+								mobileImages: [
+									"assets/slider6/5.png",
+									"assets/slider6/6.png",
+								],
 								description: `
 									<p>This was another challenge one for me.</p>
 									<br>
@@ -325,6 +360,7 @@
 							},
 							{
 								name: "Tic-Tac-Toe",
+								url: "https://aumaca.github.io/Tic-Tac-Toe/",
 								badges: [
 									"https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black",
 									"https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white",
@@ -332,8 +368,14 @@
 									"https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white",
 									"https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white",
 								],
-								desktopImages: ["assets/slider2/1.png"],
-								mobileImages: ["assets/slider1/7.png"],
+								desktopImages: [
+									"assets/slider5/1.png",
+									"assets/slider5/2.png",
+								],
+								mobileImages: [
+									"assets/slider5/3.png",
+									"assets/slider5/4.png",
+								],
 								description: `
 									<p>One of the first projects I ever did, when I was still learning about the whole concept of web development.</p>
 								`,
@@ -343,8 +385,11 @@
 				},
 				mounted() {
 					this.projects.forEach((project, index) => {
-						const totalImages =
-							project.desktopImages.length + project.mobileImages.length
+						let totalImages = 0
+						if (project.desktopImages.length > 0)
+							totalImages += project.desktopImages.length
+						if (project.mobileImages.length > 0)
+							totalImages += project.mobileImages.length
 
 						tns({
 							container: `.my-slider${index + 1}`,
