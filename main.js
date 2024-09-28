@@ -41,8 +41,6 @@ TxtType.prototype.tick = function () {
 	}, delta)
 }
 
-// JavaScript for the image popup
-
 window.onload = function () {
 	var elements = document.getElementsByClassName("typewrite")
 	for (var i = 0; i < elements.length; i++) {
@@ -65,37 +63,4 @@ window.onload = function () {
         }
     `
 	document.body.appendChild(css)
-
-	tns({
-		container: ".my-slider1",
-		items: 7,
-		slideBy: "page",
-		autoplay: true,
-		autoWidth: true,
-		nav: false,
-		controls: false,
-		autoplayButtonOutput: false,
-	})
-
-	tns({
-		container: ".my-slider2",
-		items: 6,
-		slideBy: "page",
-		autoplay: true,
-		autoWidth: true,
-		nav: false,
-		controls: false,
-		autoplayButtonOutput: false,
-	})
-
-	tns({
-		container: ".my-slider3",
-		items: 6,
-		slideBy: "page",
-		autoplay: true,
-		autoWidth: true,
-		nav: false,
-		controls: false,
-		autoplayButtonOutput: false,
-	})
 }

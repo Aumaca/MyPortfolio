@@ -7,6 +7,9 @@
 			content="width=device-width, initial-scale=1.0"
 		/>
 
+		<!-- Vue -->
+		<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
 		<!-- CSS -->
 		<link
 			rel="stylesheet"
@@ -14,10 +17,16 @@
 		/>
 
 		<!-- JS -->
-		<script src="main.js"></script>
+		<script
+			type="module"
+			src="main.js"
+		></script>
 
 		<!-- FontAwesome Icons -->
-		<script src="https://kit.fontawesome.com/5d5652b939.js" crossorigin="anonymous"></script>
+		<script
+			src="https://kit.fontawesome.com/5d5652b939.js"
+			crossorigin="anonymous"
+		></script>
 
 		<!-- Tailwind -->
 		<script src="https://cdn.tailwindcss.com"></script>
@@ -42,235 +51,244 @@
 
 		<!-- Tiny-Slider (https://www.jsdelivr.com/package/npm/tiny-slider) -->
 		<script src="https://cdn.jsdelivr.net/npm/tiny-slider@2.9.4/dist/min/tiny-slider.min.js"></script>
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tiny-slider@2.9.4/dist/tiny-slider.min.css">
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/tiny-slider@2.9.4/dist/tiny-slider.min.css"
+		/>
 	</head>
+
 	<body class="h-screen">
-		<nav class="p-5 pb-10 flex items-center justify-center">
-			<ul
-				class="text-white uppercase font-bold flex justify-end gap-4 text-sm"
-			>
-				<li>About Me</li>
-				<li>Knowledge</li>
-				<li>Links</li>
-			</ul>
-		</nav>
+		<div id="app">
+			<nav class="p-5 pb-10 flex items-center justify-center">
+				<ul
+					class="text-white uppercase font-bold flex justify-end gap-4 text-sm"
+				>
+					<li>About Me</li>
+					<li>Knowledge</li>
+					<li>Links</li>
+				</ul>
+			</nav>
 
-		<!-- MAIN -->
-		<main class="h-screen">
-			<div class="pb-5">
-				<h1 class="text-5xl text-center font-bold gradient-text title-slide">Hello world!</h1>
-			</div>
+			<!-- MAIN -->
+			<main class="h-screen">
+				<div class="pb-5">
+					<h1 class="text-5xl text-center font-bold gradient-text title-slide">
+						Hello world!
+					</h1>
+				</div>
 
-			<div class="flex flex-col gap-5">
-				<img
-					src="assets/eu.jpg"
-					class="w-52 rounded-full mx-auto"
-					alt="User Image"
-				/>
+				<div class="flex flex-col gap-5">
+					<img
+						src="assets/eu.jpg"
+						class="w-52 rounded-full mx-auto"
+						alt="User Image"
+					/>
 
-				<h3 class="text-center text-white text-xl">
-					<a class="typewrite" data-period="2000" data-type='[ "Hello! I am Carlos.", "I am a Developer...", "I like challenges"]'></a>
-						<span class="wrap"></span>
+					<h3 class="text-center text-white text-xl">
+						<a
+							class="typewrite"
+							data-period="2000"
+							data-type='[ "Hello! I am Carlos.", "I am a Developer...", "I like challenges"]'
+						>
+							<span class="wrap"></span>
+						</a>
+					</h3>
+				</div>
+
+				<!-- Social -->
+				<div class="flex gap-3 justify-end mt-28 mr-5">
+					<a href="https://github.com/Aumaca">
+						<i class="fa-brands fa-github text-white text-3xl"></i>
 					</a>
-				</h3>
-			</div>
-
-			<!-- Social -->
-			<div class="flex gap-3 justify-end mt-28 mr-5">
-				<a href="https://github.com/Aumaca">
-					<i class="fa-brands fa-github text-white text-3xl"></i>
-				</a>
-				<a href="https://www.linkedin.com/in/carlos-mariano-cardoso/">
-					<i class="fa-brands fa-linkedin text-white text-3xl"></i>
-				</a>
-				<a href="https://www.youtube.com/@_aumaca">
-					<i class="fa-brands fa-youtube text-white text-3xl"></i>
-				</a>
-				<a href="https://stackoverflow.com/users/19912446/c-aumaca">
-					<i class="fa-brands fa-stack-overflow text-white text-3xl"></i>
-				</a>
-				<a href="https://judge.beecrowd.com/en/profile/878874">
-					<img src="assets/bee.png" class="w-8 h-8" />
-				</a>
-			</div>
-
-			<!-- Circles design -->
-			<div class="absolute bottom-0 left-0 -ml-4">
-				<div class="background-circles">
-					<div class="circle"></div>
-					<div class="circle"></div>
-					<div class="circle"></div>
-					<div class="circle"></div>
-					<div class="circle"></div>
-					<div class="circle"></div>
-					<div class="circle"></div>
-					<div class="circle"></div>
-					<div class="circle"></div>
-					<div class="circle"></div>
-					<div class="circle"></div>
-					<div class="circle"></div>
-					<div class="circle"></div>
-					<div class="circle"></div>
-					<div class="circle"></div>
-					<div class="circle"></div>
-					<div class="circle"></div>
-					<div class="circle"></div>
-					<div class="circle"></div>
-					<div class="circle"></div>
-					<div class="circle"></div>
-					<div class="circle"></div>
-					<div class="circle"></div>
-					<div class="circle"></div>
-					<div class="circle"></div>
+					<a href="https://www.linkedin.com/in/carlos-mariano-cardoso/">
+						<i class="fa-brands fa-linkedin text-white text-3xl"></i>
+					</a>
+					<a href="https://www.youtube.com/@_aumaca">
+						<i class="fa-brands fa-youtube text-white text-3xl"></i>
+					</a>
+					<a href="https://stackoverflow.com/users/19912446/c-aumaca">
+						<i class="fa-brands fa-stack-overflow text-white text-3xl"></i>
+					</a>
+					<a href="https://judge.beecrowd.com/en/profile/878874">
+						<img
+							src="assets/bee.png"
+							class="w-8 h-8"
+						/>
+					</a>
 				</div>
-			</div>
 
-			<!-- Arrow down -->
-			<div class="absolute bottom-0 right-0 p-5 text-2xl animate-arrow">
-				<i class="fa-solid fa-angles-down text-white"></i>
-			</div>
-		</main>
-
-		<!-- Projects -->
-		<section id="Projects">
-			<div class="pb-5 ps-5">
-				<h2 class="text-4xl text-left font-bold gradient-text title-slide">Projects</h1>
-			</div>
-
-			<div class="flex flex-col gap-5">
-				<!-- Project -->
-				<div id="Project1">
-					<!-- Slider -->
-					<div class="p-3">
-						<div class="my-slider1 w-full h-64">
-							<img src="assets/slider1/1.png" alt="Slide 1" class="w-full h-full object-cover">
-							<img src="assets/slider1/2.png" alt="Slide 2" class="w-full h-full object-cover">
-							<img src="assets/slider1/3.png" alt="Slide 3" class="w-full h-full object-cover">
-							<img src="assets/slider1/4.png" alt="Slide 4" class="w-full h-full object-cover">
-							<img src="assets/slider1/5.png" alt="Slide 5" class="w-full h-full object-cover">
-							<img src="assets/slider1/6.png" alt="Slide 6" class="w-full h-full object-cover">
-							<img src="assets/slider1/6.png" alt="Slide 6" class="w-full h-full object-cover">
-							<img src="assets/slider1/7.png" alt="Slide 6" class="w-full h-full object-contain">
-						</div>
-						<div class="content bg-white p-3 rounded-bl-lg rounded-br-lg">
-							<h3 class="text-lg font-bold">AnimeRank</h3>
-							<div class="tags flex py-3">
-								<ul class="flex flex-wrap gap-2">
-									<li class="tag">
-											<img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaSript Badge" />
-									</li>
-									<li class="tag">
-											<img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript Badge" />
-									</li>
-									<li class="tag">
-											<img src="https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white" alt="Node.js Badge" />
-									</li>
-									<li class="tag">
-											<img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5 Badge" />
-									</li>
-									<li class="tag">
-											<img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3 Badge" />
-									</li>
-									<li class="tag">
-											<img src="https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white" alt="MongoDB Badge" />
-									</li>
-									<li class="tag">
-											<img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React Badge" />
-									</li>
-									<li class="tag">
-											<img src="https://img.shields.io/badge/Express.js-404D59?style=for-the-badge" alt="Express.js Badge" />
-									</li>
-									<li class="tag">
-											<img src="https://img.shields.io/badge/Redux-593D88?style=for-the-badge&logo=redux&logoColor=white" alt="Redux Badge" />
-									</li>
-									<li class="tag">
-											<img src="https://img.shields.io/badge/json%20web%20tokens-323330?style=for-the-badge&logo=json-web-tokens&logoColor=pink" alt="JSON Web Tokens Badge" />
-									</li>
-									<li class="tag">
-											<img src="https://img.shields.io/badge/mocha.js-323330?style=for-the-badge&logo=mocha&logoColor=Brown" alt="Mocha.js Badge" />
-									</li>
-									<li class="tag">
-											<img src="https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white" alt="Vercel Badge" />
-									</li>
-								</ul>
-							</div>
-							<p>This is a project created based on the website MyAnimeList, that allows users to create a list of animes and score them, also allowing comments.</p>
-						</div>
+				<!-- Circles Design -->
+				<div class="absolute bottom-0 left-0 -ml-4">
+					<div class="background-circles">
+						<template
+							v-for="(circle, index) in circles"
+							:key="index"
+						>
+							<div class="circle"></div>
+						</template>
 					</div>
 				</div>
 
-				<!-- Project -->
-				<div id="Project2">
-					<!-- Slider -->
-					<div class="p-3">
-						<div class="my-slider2 w-full h-64">
-							<div class="w-full h-full flex">
-								<img src="assets/slider2/1.png" alt="Slide 1" class="w-full h-full object-cover">
-							</div>
-							<div class="w-full h-full flex">
-								<img src="assets/print_1.png" alt="Slide 2" class="w-full h-full object-cover">
-							</div>
-						</div>
-						<div class="content bg-white p-3 rounded-bl-lg rounded-br-lg">
-							<h3 class="text-lg font-bold">Truth Table Generator</h3>
-							<div class="tags flex py-3">
-								<ul class="flex flex-wrap gap-2">
-									<li class="tag">
-											<img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaSript Badge" />
-									</li>
-									<li class="tag">
-											<img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript Badge" />
-									</li>
-									<li class="tag">
-											<img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5 Badge" />
-									</li>
-									<li class="tag">
-											<img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3 Badge" />
-									</li>
-								</ul>
-							</div>
-							<p>I developed a basic Truth Table Generator that constructs truth tables for AND, OR, conditional, and negation operations.</p>
-							<br>
-							<p>This project marked my first significant coding challenge, taking two weeks to complete.</p>
-							<br>
-							<p>I utilized object-oriented programming principles to enhance code readability and organization.</p>
-							<br>
-						</div>
-					</div>
+				<!-- Arrow down -->
+				<div class="absolute bottom-0 right-0 p-5 text-2xl animate-arrow">
+					<i class="fa-solid fa-angles-down text-white"></i>
+				</div>
+			</main>
+
+			<!-- Projects -->
+			<section id="Projects">
+				<div class="pb-5 ps-5">
+					<h2 class="text-4xl text-left font-bold gradient-text title-slide">
+						Projects
+					</h2>
 				</div>
 
-				<!-- Project -->
-				<div id="Project3">
-					<!-- Slider -->
-					<div class="p-3">
-						<div class="my-slider3 w-full h-64">
-							<div class="w-full h-full flex">
-								<img src="assets/slider2/1.png" alt="Slide 1" class="w-full h-full object-cover">
-							</div>
-							<div class="w-full h-full flex">
-								<img src="assets/print_1.png" alt="Slide 2" class="w-full h-full object-cover">
-							</div>
-						</div>
-						<div class="content bg-white p-3 rounded-bl-lg rounded-br-lg">
-							<h3 class="text-lg font-bold">Shell Password Manager</h3>
-							<div class="tags flex py-3">
-								<ul class="flex flex-wrap gap-2">
-									<li class="tag">
-											<img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=whitek" alt="Python Badge" />
-									</li>
-									<li class="tag">
-											<img src="https://img.shields.io/badge/SQLite-07405E?style=for-the-badge&logo=sqlite&logoColor=white" alt="SQLite Badge" />
-									</li>
-								</ul>
-							</div>
-							<p>I was curious about how to really build a password manager, that can unlock one password with another.</p>
-							<br>
-							<p>Through this little practice, I learned how to do it, and it was great!!</p>
-						</div>
-					</div>
-				</div>
+				<div class="flex flex-col gap-5">
+					<!-- Project -->
+					<template
+						v-for="(project, index) in projects"
+						:key="index"
+					>
+						<div class="p-3">
+							<!-- Slider -->
+							<div :class="'my-slider' + (index + 1) + ' w-full h-64'">
+								<!-- Desktop Images -->
+								<template
+									v-for="(image, index) in project.desktopImages"
+									:key="index"
+								>
+									<img
+										:src="image"
+										:alt="'Slide ' + (index + 1)"
+										class="w-full h-full object-cover"
+									/>
+								</template>
 
-			</div>
-		</section>
+								<!-- Mobile Images -->
+								<template
+									v-for="(image, index) in project.mobileImages"
+									:key="index"
+								>
+									<img
+										:src="image"
+										:alt="'Slide ' + (index + 1)"
+										class="w-full h-full object-contain bg-white"
+									/>
+								</template>
+							</div>
+
+							<div class="content bg-white p-3 rounded-bl-lg rounded-br-lg">
+								<h3 class="text-lg font-bold">{{project.name}}</h3>
+
+								<!-- Tags -->
+								<div class="tags flex py-3">
+									<ul class="flex flex-wrap gap-2">
+										<template
+											v-for="(badgeUrl, index) in project.badges"
+											:key="badgeUrl"
+										>
+											<li class="tag">
+												<img
+													:src="badgeUrl"
+													alt="Badge"
+												/>
+											</li>
+										</template>
+									</ul>
+								</div>
+
+								<p v-html="project.description"></p>
+							</div>
+						</div>
+					</template>
+				</div>
+			</section>
+		</div>
+
+		<script>
+			const { createApp } = Vue
+
+			createApp({
+				data() {
+					return {
+						circles: Array.from({ length: 25 }),
+						projects: [
+							{
+								name: "AnimeRank",
+								badges: [
+									"https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black",
+									"https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white",
+									"https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white",
+									"https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white",
+									"https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white",
+									"https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white",
+								],
+								desktopImages: [
+									"assets/slider1/1.png",
+									"assets/slider1/2.png",
+									"assets/slider1/3.png",
+									"assets/slider1/4.png",
+									"assets/slider1/5.png",
+									"assets/slider1/6.png",
+								],
+								mobileImages: ["assets/slider1/7.png"],
+								description: `
+									<p>This is a project created based on the website MyAnimeList, that allows users to create a list of animes and score them, also allowing comments.</p>
+								`,
+							},
+							{
+								name: "Truth Table Generator",
+								badges: [
+									"https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black",
+									"https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white",
+									"https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white",
+									"https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white",
+								],
+								desktopImages: ["assets/slider2/1.png"],
+								mobileImages: ["assets/slider1/7.png"],
+								description: `
+									<p>I developed a basic Truth Table Generator that constructs truth tables for AND, OR, conditional, and negation operations.</p>
+									<br>
+									<p>This project marked my first significant coding challenge, taking two weeks to complete.</p>
+									<br>
+									<p>I utilized object-oriented programming principles to enhance code readability and organization.</p>
+								`,
+							},
+							{
+								name: "Shell Password Manager",
+								badges: [
+									"https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=whitek",
+									"https://img.shields.io/badge/SQLite-07405E?style=for-the-badge&logo=sqlite&logoColor=white",
+								],
+								desktopImages: ["assets/slider2/1.png"],
+								mobileImages: ["assets/slider1/7.png"],
+								description: `
+									<p>I was curious about how to really build a password manager, that can unlock one password with another.</p>
+									<br>
+									<p>Through this little practice, I learned how to do it, and it was great!!</p>
+								`,
+							},
+						],
+					}
+				},
+				mounted() {
+					this.projects.forEach((project, index) => {
+						const totalImages =
+							project.desktopImages.length + project.mobileImages.length
+
+						tns({
+							container: `.my-slider${index + 1}`,
+							items: totalImages,
+							slideBy: "page",
+							autoplay: true,
+							autoWidth: true,
+							nav: false,
+							controls: false,
+							autoplayButtonOutput: false,
+						})
+					})
+				},
+			}).mount("#app")
+		</script>
 	</body>
 </html>
