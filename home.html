@@ -1,5 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html
+	lang="en"
+	class="scroll-smooth"
+>
 	<head>
 		<meta charset="UTF-8" />
 		<meta
@@ -57,20 +60,36 @@
 		/>
 	</head>
 
-	<body class="h-screen">
+	<body>
 		<div id="app">
-			<nav class="p-5 pb-10 flex items-center justify-center">
+			<nav
+				class="p-5 pb-10 flex items-center justify-center sticky fixed top-0 z-10"
+			>
 				<ul
-					class="text-white uppercase font-bold flex justify-end gap-4 text-sm"
+					:class="[
+            'rounded-full p-3 px-5 text-white uppercase font-bold flex justify-end gap-4 text-sm transition-all duration-500',
+            { 'bg-black bg-opacity-80': isScrolled, 'bg-transparent': !isScrolled, 'translate-y-[-200%]': isHidden }
+        ]"
 				>
-					<li>About Me</li>
-					<li>Knowledge</li>
-					<li>Links</li>
+					<a @click.prevent="scrollToAboutMe">
+						<li :class="{ 'gradient-animate': isAboutMeInView }">About Me</li>
+					</a>
+					<a @click.prevent="scrollToProjects">
+						<li :class="{ 'gradient-animate': isProjectsInView }">Projects</li>
+					</a>
+					<a @click.prevent="scrollToKnowledge">
+						<li :class="{ 'gradient-animate': isKnowledgeInView }">
+							Knowledge
+						</li>
+					</a>
 				</ul>
 			</nav>
 
 			<!-- MAIN -->
-			<main class="h-screen">
+			<main
+				class="h-screen"
+				id="about-me"
+			>
 				<div class="pb-5">
 					<h1 class="text-5xl text-center font-bold gradient-text title-slide">
 						Hello world!
@@ -136,7 +155,7 @@
 			</main>
 
 			<!-- Projects -->
-			<section id="Projects">
+			<section id="projects">
 				<div class="pb-5 ps-5">
 					<h2 class="text-4xl text-left font-bold gradient-text title-slide">
 						Projects
@@ -220,6 +239,10 @@
 					</template>
 				</div>
 			</section>
+
+			<section id="knowledge">
+				<h1>teste</h1>
+			</section>
 		</div>
 
 		<script>
@@ -228,6 +251,12 @@
 			createApp({
 				data() {
 					return {
+						isScrolled: false,
+						lastScrollY: 0,
+						isHidden: false,
+						isAboutMeInView: false,
+						isProjectsInView: false,
+						isKnowledgeInView: false,
 						circles: Array.from({ length: 25 }),
 						projects: [
 							{
@@ -346,10 +375,7 @@
 									"assets/slider6/3.png",
 									"assets/slider6/4.png",
 								],
-								mobileImages: [
-									"assets/slider6/5.png",
-									"assets/slider6/6.png",
-								],
+								mobileImages: ["assets/slider6/5.png", "assets/slider6/6.png"],
 								description: `
 									<p>This was another challenge one for me.</p>
 									<br>
@@ -368,14 +394,8 @@
 									"https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white",
 									"https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white",
 								],
-								desktopImages: [
-									"assets/slider5/1.png",
-									"assets/slider5/2.png",
-								],
-								mobileImages: [
-									"assets/slider5/3.png",
-									"assets/slider5/4.png",
-								],
+								desktopImages: ["assets/slider5/1.png", "assets/slider5/2.png"],
+								mobileImages: ["assets/slider5/3.png", "assets/slider5/4.png"],
 								description: `
 									<p>One of the first projects I ever did, when I was still learning about the whole concept of web development.</p>
 								`,
@@ -384,6 +404,9 @@
 					}
 				},
 				mounted() {
+					window.addEventListener("scroll", this.handleScroll)
+
+					// Create sliders for each project
 					this.projects.forEach((project, index) => {
 						let totalImages = 0
 						if (project.desktopImages.length > 0)
@@ -402,6 +425,69 @@
 							autoplayButtonOutput: false,
 						})
 					})
+
+					// Check user scroll to animate the nav items
+					const aboutMeSection = document.querySelector("#about-me")
+					const projectsSection = document.querySelector("#projects")
+					const knowledgeSection = document.querySelector("#knowledge")
+
+					const observerConfig = { threshold: 0.5 }
+
+					const observer = new IntersectionObserver((entries) => {
+						entries.forEach((entry) => {
+							if (this.isAboutMeInView || this.isKnowledgeInView) {
+								this.isProjectsInView = false
+							}
+							if (entry.target.id === "about-me") {
+								this.isAboutMeInView = entry.isIntersecting
+								console.log(`About Me in view: ${this.isAboutMeInView}`)
+							}
+							if (entry.target.id === "projects") {
+								this.isProjectsInView = true
+								console.log(`Projects in view: ${this.isProjectsInView}`)
+							}
+							if (entry.target.id === "knowledge") {
+								this.isKnowledgeInView = entry.isIntersecting
+								console.log(`Knowledge in view: ${this.isKnowledgeInView}`)
+							}
+						})
+					}, observerConfig)
+
+					observer.observe(aboutMeSection)
+					observer.observe(projectsSection)
+					observer.observe(knowledgeSection)
+				},
+				beforeDestroy() {
+					window.removeEventListener("scroll", this.handleScroll)
+				},
+				methods: {
+					handleScroll() {
+						const scrollY = window.scrollY
+						this.isScrolled = scrollY > window.innerHeight
+
+						if (scrollY > this.lastScrollY) this.isHidden = true
+						else this.isHidden = false
+
+						this.lastScrollY = scrollY
+					},
+					scrollToAboutMe() {
+						window.scrollTo({
+							top: 0,
+							behavior: "smooth", // Optional: adds a smooth scrolling effect
+						})
+					},
+					scrollToProjects() {
+						window.scrollTo({
+							top: 0,
+							behavior: "smooth", // Optional: adds a smooth scrolling effect
+						})
+					},
+					scrollToKnowledge() {
+						window.scrollTo({
+							top: 0,
+							behavior: "smooth", // Optional: adds a smooth scrolling effect
+						})
+					},
 				},
 			}).mount("#app")
 		</script>
