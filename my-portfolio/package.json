@@ -11,6 +11,7 @@
     "format": "prettier --write src/"
   },
   "dependencies": {
+    "flag-icons": "^7.2.3",
     "tiny-slider": "^2.9.4",
     "vue": "^3.4.29"
   },
