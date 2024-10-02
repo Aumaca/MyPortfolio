@@ -64,12 +64,15 @@ onMounted(() => {
     </div>
 
     <div class="content bg-white p-3 rounded-bl-lg rounded-br-lg">
+      <!-- Name -->
       <a v-if="project.url" :href="project.url" target="_blank">
         <div class="flex items-center gap-2">
           <h3 class="text-lg font-bold">{{ project.name }}</h3>
           <i v-if="project.url" class="fa-solid fa-arrow-up-right-from-square text-sm"></i>
         </div>
       </a>
+
+      <!-- Name -->
       <div v-else>
         <div class="flex items-center gap-2">
           <h3 class="text-lg font-bold">{{ project.name }}</h3>
@@ -87,7 +90,11 @@ onMounted(() => {
         </ul>
       </div>
 
-      <p v-html="project.description.en"></p>
+      <!-- Description -->
+      <template v-for="(paragraph, index) in project.description.en.split('\n')" :key="index">
+        <p>{{ paragraph }}</p>
+        <br v-if="index !== project.description.en.split('\n').length - 1" />
+      </template>
     </div>
   </div>
 </template>

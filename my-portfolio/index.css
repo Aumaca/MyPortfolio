@@ -46,6 +46,21 @@ body {
   animation: title-slide 1.5s ease-out forwards;
 }
 
+@keyframes navbar-slide-down {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.navbar-slide-down {
+  animation: navbar-slide-down 0.8s ease-out forwards;
+}
+
 @keyframes arrow-bounce {
   0%,
   100% {
@@ -62,10 +77,10 @@ body {
 
 .background-circles {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(5, 1fr);
-  width: 10rem;
-  height: 10rem;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  width: 11rem;
+  height: 12rem;
   top: 0;
   left: 0;
   z-index: -1;
@@ -76,7 +91,8 @@ body {
   border-radius: 50%;
   width: 0.5rem;
   height: 0.5rem;
-  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 @keyframes gradient-shift {
@@ -97,4 +113,9 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: gradient-shift 6s ease infinite;
+}
+
+.gradient-white-background {
+  background-color: #f9fcff;
+  background-image: linear-gradient(147deg, #f9fcff 0%, #dee4ea 74%);
 }
