@@ -14,6 +14,9 @@ const props = defineProps({
       en: String,
       pt: String
     }
+  },
+  getDescription: {
+    type: Function
   }
 })
 
@@ -91,7 +94,10 @@ onMounted(() => {
       </div>
 
       <!-- Description -->
-      <template v-for="(paragraph, index) in project.description.en.split('\n')" :key="index">
+      <template
+        v-for="(paragraph, index) in getDescription(project.description).split('\n')"
+        :key="index"
+      >
         <p>{{ paragraph }}</p>
         <br v-if="index !== project.description.en.split('\n').length - 1" />
       </template>

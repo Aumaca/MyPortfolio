@@ -63,6 +63,22 @@ const projects = [
     }
   },
   {
+    name: 'Organização Contábil Sorocaba Website',
+    url: 'https://contabilsorocaba.com.br/',
+    badges: [
+      'https://img.shields.io/badge/Wordpress-21759B?style=for-the-badge&logo=wordpress&logoColor=white',
+      'https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black',
+      'https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white',
+      'https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white'
+    ],
+    desktopImages: ['slider7/1.png', 'slider7/2.png', 'slider7/3.png'],
+    mobileImages: ['slider7/4.png', 'slider7/5.png', 'slider7/6.png', 'slider7/7.png'],
+    description: {
+      en: `This project marked my first professional work as a web developer in 2023.\nIn my previous job at an accounting office, I was tasked with creating a new website for the company, which was previously on WordPress. My responsibility was to completely redesign the site's aesthetics, taking into account the specific needs and requests of the client.\nI hand-coded all the design in CSS, which allowed me to customize each element of the site according to the company's visual guidelines, ensuring a unique and professional presentation.\nDuring this process, I had the opportunity to work on a project on demand, facing various requirements that demanded creativity and attention to detail. This experience not only helped me improve my technical skills but also provided me with a deeper understanding of the importance of intuitive and attractive design for user satisfaction.`,
+      pt: `Este projeto marcou meu primeiro trabalho profissional como desenvolvedor web em 2023.\nEm meu antigo emprego em um escritório de contabilidade, fui encarregado de criar um novo site para a empresa, que estava previamente em WordPress. Minha responsabilidade consistiu em reformular completamente a estética do site, levando em conta as necessidades específicas e as solicitações do cliente.\nRealizei todo o design à mão em CSS, o que me permitiu personalizar cada elemento do site de acordo com as diretrizes visuais da empresa, garantindo uma apresentação única e profissional.\nDurante esse processo, tive a oportunidade de trabalhar em um projeto sob demanda, enfrentando diversos requisitos que exigiam criatividade e atenção aos detalhes. Essa experiência não apenas me ajudou a aprimorar minhas habilidades técnicas, mas também me proporcionou uma compreensão mais profunda da importância de um design intuitivo e atraente para a satisfação do usuário.`
+    }
+  },
+  {
     name: 'Shell Password Manager',
     url: 'https://github.com/Aumaca/Shell-Password-Manager',
     badges: [

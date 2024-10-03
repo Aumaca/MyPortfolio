@@ -1,8 +1,12 @@
 <script setup>
-import { onMounted } from 'vue'
+import { onMounted, watch } from 'vue'
 
-defineProps({
-  circles: Number
+const props = defineProps({
+  circles: Array,
+  currentLanguage: String,
+  changeLanguage: {
+    type: Function
+  }
 })
 
 onMounted(() => {
@@ -67,9 +71,9 @@ onMounted(() => {
     var css = document.createElement('style')
     css.type = 'text/css'
     css.innerHTML = `
-        .typewrite > .wrap { 
-            border-right: 0.08em solid #fff; 
-            animation: blink 0.7s step-end infinite; 
+        .typewrite > .wrap {
+            border-right: 0.08em solid #fff;
+            animation: blink 0.7s step-end infinite;
         }
         @keyframes blink {
             50% { border-color: transparent; }
@@ -104,8 +108,18 @@ onMounted(() => {
 
     <div class="mt-5">
       <div class="flex flex-col ml-3 gap-3 mb-5">
-        <span class="fi fi-us text-3xl rounded-lg"></span>
-        <span class="fi fi-br text-3xl rounded-lg"></span>
+        <div>
+          <span class="fi fi-us text-3xl rounded-lg" @click="changeLanguage('en')"></span>
+          <i v-if="currentLanguage === 'en'" class="fa-solid fa-circle-check text-green-500"
+            >teste</i
+          >
+        </div>
+        <div>
+          <span class="fi fi-br text-3xl rounded-lg" @click="changeLanguage('pt')"></span>
+          <i v-if="currentLanguage === 'pt'" class="fa-solid fa-circle-check text-green-500"
+            >teste</i
+          >
+        </div>
       </div>
 
       <div class="flex justify-between">

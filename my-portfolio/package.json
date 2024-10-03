@@ -13,7 +13,8 @@
   "dependencies": {
     "flag-icons": "^7.2.3",
     "tiny-slider": "^2.9.4",
-    "vue": "^3.4.29"
+    "vue": "^3.4.29",
+    "vue-i18n": "^9.14.1"
   },
   "devDependencies": {
     "@rushstack/eslint-patch": "^1.8.0",
