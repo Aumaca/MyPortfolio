@@ -72,7 +72,14 @@ onBeforeUnmount(() => {
 </script>
 
 <template>
-  <nav class="p-5 pb-10 flex items-center justify-center sticky fixed top-0 z-10 navbar-slide-down">
+  <nav
+    :class="[
+      'p-5 pb-10 flex items-center justify-center sticky top-0 z-10 navbar-slide-down',
+      {
+        invisible: isHidden
+      }
+    ]"
+  >
     <ul
       :class="[
         'rounded-full p-3 text-white uppercase font-bold flex justify-end gap-4 text-sm transition-all duration-500',

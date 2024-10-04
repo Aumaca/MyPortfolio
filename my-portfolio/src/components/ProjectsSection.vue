@@ -11,7 +11,7 @@ defineProps({
 
 <!-- Projects -->
 <template>
-  <section id="projects">
+  <section id="projects" class="mt-10">
     <div class="pb-5 ps-5">
       <h2 class="text-4xl text-left font-bold gradient-text title-slide">{{ $t('projects') }}</h2>
     </div>

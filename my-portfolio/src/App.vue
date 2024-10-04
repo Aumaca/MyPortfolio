@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" class="gradient-background">
     <!-- Navbar -->
     <NavbarSection />
 
@@ -15,6 +15,12 @@
 
     <!-- Knowledge -->
     <KnowledgeSection />
+
+    <!-- Contact -->
+    <ContactSection />
+
+    <!-- Footer -->
+    <FooterSection />
   </div>
 </template>
 
@@ -26,6 +32,8 @@ import NavbarSection from './components/NavbarSection.vue'
 import AboutMeSection from './components/AboutMeSection.vue'
 import ProjectsSection from './components/ProjectsSection.vue'
 import KnowledgeSection from './components/KnowledgeSection.vue'
+import ContactSection from './components/ContactSection.vue'
+import FooterSection from './components/FooterSection.vue'
 
 const circles = Array.from({ length: 36 })
 

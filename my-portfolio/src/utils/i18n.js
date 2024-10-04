@@ -9,7 +9,9 @@ export const messages = {
     languages: 'Languages',
     webDevelopment: 'Web Development',
     database: 'Database',
-    others: 'Others'
+    others: 'Others',
+    contact: 'Contact',
+    developedBy: 'Developed by Carlos Aumaca'
   },
   pt: {
     welcome: 'Olá Mundo!',
@@ -19,7 +21,9 @@ export const messages = {
     languages: 'Linguagens',
     webDevelopment: 'Desenvolvimento WEB',
     database: 'Banco de Dados',
-    others: 'Outros'
+    others: 'Outros',
+    contact: 'Contato',
+    developedBy: 'Desenvolvido por Carlos Aumaca'
   }
 }
 
