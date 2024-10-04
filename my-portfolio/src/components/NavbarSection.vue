@@ -1,6 +1,10 @@
 <script setup>
 import { ref, onMounted, onBeforeUnmount } from 'vue'
 
+defineProps({
+  messages: Object
+})
+
 const isScrolled = ref(false)
 const lastScrollY = ref(0)
 const isHidden = ref(false)
@@ -19,7 +23,7 @@ const handleScroll = () => {
 const scrollToAboutMe = () => {
   window.scrollTo({
     top: 0,
-    behavior: 'smooth' // Optional: adds a smooth scrolling effect
+    behavior: 'smooth'
   })
 }
 
@@ -42,7 +46,6 @@ const scrollToKnowledge = () => {
 onMounted(() => {
   window.addEventListener('scroll', handleScroll)
 
-  // Check user scroll to animate the nav items
   const aboutMeSection = document.querySelector('#about-me')
   const projectsSection = document.querySelector('#projects')
   const knowledgeSection = document.querySelector('#knowledge')
@@ -72,7 +75,7 @@ onBeforeUnmount(() => {
   <nav class="p-5 pb-10 flex items-center justify-center sticky fixed top-0 z-10 navbar-slide-down">
     <ul
       :class="[
-        'rounded-full p-3 px-5 text-white uppercase font-bold flex justify-end gap-4 text-sm transition-all duration-500',
+        'rounded-full p-3 text-white uppercase font-bold flex justify-end gap-4 text-sm transition-all duration-500',
         {
           'bg-black bg-opacity-80': isScrolled,
           'bg-transparent': !isScrolled,
@@ -81,13 +84,13 @@ onBeforeUnmount(() => {
       ]"
     >
       <a @click.prevent="scrollToAboutMe">
-        <li :class="{ 'gradient-animate': isAboutMeInView }">About Me</li>
+        <li :class="{ 'gradient-animate': isAboutMeInView }">{{ $t('aboutMe') }}</li>
       </a>
       <a @click.prevent="scrollToProjects">
-        <li :class="{ 'gradient-animate': isProjectsInView }">Projects</li>
+        <li :class="{ 'gradient-animate': isProjectsInView }">{{ $t('projects') }}</li>
       </a>
       <a @click.prevent="scrollToKnowledge">
-        <li :class="{ 'gradient-animate': isKnowledgeInView }">Knowledge</li>
+        <li :class="{ 'gradient-animate': isKnowledgeInView }">{{ $t('knowledge') }}</li>
       </a>
     </ul>
   </nav>

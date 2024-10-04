@@ -1,27 +1,20 @@
 <template>
   <div id="app">
-    <NavbarItem />
+    <!-- Navbar -->
+    <NavbarSection />
 
     <!-- Main -->
-    <MainItem :circles="circles" :currentLanguage="locale.value" :changeLanguage="changeLanguage" />
+    <AboutMeSection
+      :circles="circles"
+      :currentLanguage="currentLocale"
+      :changeLanguage="changeLanguage"
+    />
 
     <!-- Projects -->
-    <section id="projects">
-      <div class="pb-5 ps-5">
-        <h2 class="text-4xl text-left font-bold gradient-text title-slide">Projects</h2>
-      </div>
+    <ProjectsSection :getDescription="getDescription" />
 
-      <div class="flex flex-col gap-5">
-        <!-- Project -->
-        <template v-for="(project, index) in projects" :key="index">
-          <Project :project="project" :index="index" :getDescription="getDescription" />
-        </template>
-      </div>
-    </section>
-
-    <section id="knowledge" class="mt-10">
-      <KnowledgeItem />
-    </section>
+    <!-- Knowledge -->
+    <KnowledgeSection />
   </div>
 </template>
 
@@ -29,18 +22,16 @@
 import { useI18n } from 'vue-i18n'
 import { ref } from 'vue'
 
-import Project from './components/ProjectItem.vue'
-import projects from './utils/projects'
-import NavbarItem from './components/NavbarItem.vue'
-import KnowledgeItem from './components/KnowledgeItem.vue'
-import MainItem from './components/MainItem.vue'
+import NavbarSection from './components/NavbarSection.vue'
+import AboutMeSection from './components/AboutMeSection.vue'
+import ProjectsSection from './components/ProjectsSection.vue'
+import KnowledgeSection from './components/KnowledgeSection.vue'
 
 const circles = Array.from({ length: 36 })
 
 const { locale } = useI18n()
 
 const currentLocale = ref(locale.value)
-console.log(locale.value)
 
 const changeLanguage = (lang) => {
   currentLocale.value = lang
