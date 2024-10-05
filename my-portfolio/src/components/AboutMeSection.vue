@@ -124,73 +124,76 @@ watch(
 
 <template>
   <!-- MAIN -->
-  <main class="h-screen flex justify-center" id="about-me">
-    <div class="flex flex-col items-center gap-5">
-      <h1 class="text-5xl text-center font-bold gradient-text title-slide">
+  <main class="h-full flex flex-col items-center w-full my-auto" id="about-me">
+    <div class="flex flex-col items-center gap-5 text-center mt-auto">
+      <h1 class="text-5xl font-bold gradient-text title-slide">
         {{ $t('welcome') }}
       </h1>
 
-      <img src="../assets/media/eu.jpg" class="w-52 rounded-full profile-pic" alt="User Image" />
-      <h3 class="text-center text-white text-xl mt-5">
-        <a class="typewrite" data-period="1000" :key="typewriterKey">
-          <span class="wrap"></span>
-        </a>
-      </h3>
+      <div class="flex flex-col gap-5">
+        <!-- Picture and Flags -->
+        <div class="flex items-center justify-center">
+          <!-- Flags -->
+          <div class="absolute flex flex-col gap-3 left-0 ml-3">
+            <div class="flex items-center">
+              <span
+                class="fi fi-us text-3xl rounded-lg cursor-pointer"
+                @click="changeLanguage('en')"
+              ></span>
+              <div v-if="currentLanguage === 'en'" class="z-10 -ml-2 -mt-2">
+                <i class="fa-solid fa-circle-check text-green-500"></i>
+              </div>
+            </div>
+            <div class="flex items-center">
+              <span
+                class="fi fi-br text-3xl rounded-lg cursor-pointer"
+                @click="changeLanguage('pt')"
+              ></span>
+              <div v-if="currentLanguage === 'pt'" class="z-10 -ml-2 -mt-2">
+                <i class="fa-solid fa-circle-check text-green-500"></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- Picture -->
+          <img
+            src="../assets/media/eu.jpg"
+            class="w-52 rounded-full profile-pic"
+            alt="User Image"
+          />
+        </div>
+
+        <!-- Typewriter -->
+        <h3 class="text-white text-xl mt-5">
+          <a class="typewrite" data-period="1000" :key="typewriterKey">
+            <span class="wrap"></span>
+          </a>
+        </h3>
+      </div>
     </div>
 
-    <!-- Flags -->
-    <div class="absolute flex flex-col ml-3 gap-3 top-1/2 left-0">
-      <div class="flex">
-        <span
-          class="fi fi-us text-3xl rounded-lg cursor-pointer"
-          @click="changeLanguage('en')"
-        ></span>
-        <div v-if="currentLanguage === 'en'" class="z-10 -ml-2 -mt-2">
-          <i class="fa-solid fa-circle-check text-green-500"></i>
-        </div>
-      </div>
-      <div class="flex">
-        <span
-          class="fi fi-br text-3xl rounded-lg cursor-pointer"
-          @click="changeLanguage('pt')"
-        ></span>
-        <div v-if="currentLanguage === 'pt'" class="z-10 -ml-2 -mt-2">
-          <i class="fa-solid fa-circle-check text-green-500"></i>
-        </div>
-      </div>
-    </div>
-
-    <div class="w-full flex justify-between absolute -bottom-20">
-      <!-- Circles Design -->
-      <div>
-        <div class="background-circles -ml-4">
-          <template v-for="(circle, index) in circles" :key="index">
-            <div class="circle"></div>
-          </template>
-        </div>
-      </div>
-
-      <!-- Social -->
+    <div class="flex justify-between my-auto">
+      <!-- Social Icons -->
       <div class="flex gap-3 mx-auto">
-        <a href="https://github.com/Aumaca" target="_bla">
+        <a href="https://github.com/Aumaca" target="_blank">
           <i class="fa-brands fa-github text-white text-3xl"></i>
         </a>
-        <a href="https://www.linkedin.com/in/carlos-mariano-cardoso/" target="_bla">
+        <a href="https://www.linkedin.com/in/carlos-mariano-cardoso/" target="_blank">
           <i class="fa-brands fa-linkedin text-white text-3xl"></i>
         </a>
-        <a href="https://www.youtube.com/@_aumaca" target="_bla">
+        <a href="https://www.youtube.com/@_aumaca" target="_blank">
           <i class="fa-brands fa-youtube text-white text-3xl"></i>
         </a>
-        <a href="https://stackoverflow.com/users/19912446/c-aumaca" target="_bla">
+        <a href="https://stackoverflow.com/users/19912446/c-aumaca" target="_blank">
           <i class="fa-brands fa-stack-overflow text-white text-3xl"></i>
         </a>
-        <a href="https://judge.beecrowd.com/en/profile/878874" target="_bla">
-          <img src="../assets/media/bee.png" class="w-8 h-8" />
+        <a href="https://judge.beecrowd.com/en/profile/878874" target="_blank">
+          <img src="../assets/media/bee.png" class="w-8 h-8" alt="Bee Crowd Badge" />
         </a>
       </div>
     </div>
 
-    <!-- Arrow down -->
+    <!-- Arrow Down -->
     <div class="absolute bottom-0 right-0 p-5 text-2xl animate-arrow">
       <i class="fa-solid fa-angles-down text-white"></i>
     </div>

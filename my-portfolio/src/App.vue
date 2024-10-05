@@ -1,14 +1,16 @@
 <template>
   <div id="app" class="gradient-background">
-    <!-- Navbar -->
-    <NavbarSection />
+    <div class="h-screen flex flex-col">
+      <!-- Navbar -->
+      <NavbarSection />
 
-    <!-- Main -->
-    <AboutMeSection
-      :circles="circles"
-      :currentLanguage="currentLocale"
-      :changeLanguage="changeLanguage"
-    />
+      <!-- Main -->
+      <AboutMeSection
+        :circles="circles"
+        :currentLanguage="currentLocale"
+        :changeLanguage="changeLanguage"
+      />
+    </div>
 
     <!-- Projects -->
     <ProjectsSection :getDescription="getDescription" />
