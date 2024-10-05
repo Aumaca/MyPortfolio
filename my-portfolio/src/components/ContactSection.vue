@@ -1,7 +1,7 @@
 <template>
   <section id="contact" class="bg-white p-5 pt-0">
     <div class="flex flex-col gap-5">
-      <h2 class="text-4xl text-center font-bold gradient-text title-slide">{{ $t('contact') }}</h2>
+      <h2 class="text-4xl text-center font-bold gradient-text">{{ $t('contact') }}</h2>
 
       <!-- Category -->
       <div class="p-3">

@@ -125,7 +125,7 @@ watch(
 <template>
   <!-- MAIN -->
   <main class="h-full flex flex-col items-center w-full my-auto" id="about-me">
-    <div class="flex flex-col items-center gap-5 text-center mt-auto">
+    <div class="flex flex-col items-center my-auto gap-5 text-center mt-auto">
       <h1 class="text-5xl font-bold gradient-text title-slide">
         {{ $t('welcome') }}
       </h1>
@@ -134,7 +134,7 @@ watch(
         <!-- Picture and Flags -->
         <div class="flex items-center justify-center">
           <!-- Flags -->
-          <div class="absolute flex flex-col gap-3 left-0 ml-3">
+          <div class="absolute flex flex-col gap-3 left-0 ml-5">
             <div class="flex items-center">
               <span
                 class="fi fi-us text-3xl rounded-lg cursor-pointer"
