@@ -1,37 +1,14 @@
 <template>
   <div id="app" class="gradient-background">
+    <!-- Navbar -->
+    <NavbarSection />
+
     <div class="h-screen flex flex-col">
       <!-- Flags -->
-      <div class="fixed flex flex-col gap-3 top-1/2 transform -translate-y-1/2">
-        <div class="flex items-center">
-          <span
-            class="fi fi-us text-3xl rounded-lg cursor-pointer"
-            @click="changeLanguage('en')"
-          ></span>
-          <div v-if="currentLanguage === 'en'" class="z-10 -ml-2 -mt-2">
-            <i class="fa-solid fa-circle-check text-green-500"></i>
-          </div>
-        </div>
-        <div class="flex items-center">
-          <span
-            class="fi fi-br text-3xl rounded-lg cursor-pointer"
-            @click="changeLanguage('pt')"
-          ></span>
-          <div v-if="currentLanguage === 'pt'" class="z-10 -ml-2 -mt-2">
-            <i class="fa-solid fa-circle-check text-green-500"></i>
-          </div>
-        </div>
-      </div>
-
-      <!-- Navbar -->
-      <NavbarSection />
+      <FlagsItem :currentLanguage="currentLocale" :changeLanguage="changeLanguage" />
 
       <!-- Main -->
-      <AboutMeSection
-        :circles="circles"
-        :currentLanguage="currentLocale"
-        :changeLanguage="changeLanguage"
-      />
+      <AboutMeSection :circles="circles" :currentLanguage="currentLocale" />
     </div>
 
     <!-- Projects -->
@@ -52,6 +29,7 @@
 import { useI18n } from 'vue-i18n'
 import { ref } from 'vue'
 
+import FlagsItem from './components/FlagsItem.vue'
 import NavbarSection from './components/NavbarSection.vue'
 import AboutMeSection from './components/AboutMeSection.vue'
 import ProjectsSection from './components/ProjectsSection.vue'

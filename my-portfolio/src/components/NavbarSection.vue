@@ -74,7 +74,7 @@ onBeforeUnmount(() => {
 <template>
   <nav
     :class="[
-      'p-5 pb-10 flex items-center justify-center sticky top-0 z-10 navbar-slide-down',
+      'fixed flex items-center justify-center top-0 z-12 left-1/2 transform -translate-x-1/2 navbar-slide-down',
       {
         invisible: isHidden
       }
@@ -82,7 +82,7 @@ onBeforeUnmount(() => {
   >
     <ul
       :class="[
-        'rounded-full p-3 text-white uppercase font-bold flex justify-end gap-4 text-sm transition-all duration-500',
+        'rounded-full p-3 text-white uppercase font-bold flex justify-end gap-4 text-sm transition-all duration-500 mt-5',
         {
           'bg-black bg-opacity-80': isScrolled,
           'bg-transparent': !isScrolled,
@@ -90,15 +90,24 @@ onBeforeUnmount(() => {
         }
       ]"
     >
-      <a @click.prevent="scrollToAboutMe">
-        <li :class="{ 'gradient-animate': isAboutMeInView }">{{ $t('aboutMe') }}</li>
-      </a>
-      <a @click.prevent="scrollToProjects">
-        <li :class="{ 'gradient-animate': isProjectsInView }">{{ $t('projects') }}</li>
-      </a>
-      <a @click.prevent="scrollToKnowledge">
-        <li :class="{ 'gradient-animate': isKnowledgeInView }">{{ $t('knowledge') }}</li>
-      </a>
+      <li
+        @click.prevent="scrollToAboutMe"
+        :class="['cursor-pointer text-nowrap', { 'gradient-animate': isAboutMeInView }]"
+      >
+        {{ $t('aboutMe') }}
+      </li>
+      <li
+        @click.prevent="scrollToProjects"
+        :class="['cursor-pointer text-nowrap', { 'gradient-animate': isProjectsInView }]"
+      >
+        {{ $t('projects') }}
+      </li>
+      <li
+        @click.prevent="scrollToKnowledge"
+        :class="['cursor-pointer text-nowrap', { 'gradient-animate': isKnowledgeInView }]"
+      >
+        {{ $t('knowledge') }}
+      </li>
     </ul>
   </nav>
 </template>

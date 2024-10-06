@@ -32,7 +32,7 @@ onMounted(() => {
   tns({
     container: `.my-slider${props.index + 1}`,
     items: totalImages,
-    slideBy: 'page',
+    slideBy: 1,
     autoplay: true,
     autoWidth: true,
     nav: false,
@@ -42,7 +42,6 @@ onMounted(() => {
 })
 </script>
 
-<!-- Project -->
 <template>
   <div class="p-3">
     <!-- Slider -->

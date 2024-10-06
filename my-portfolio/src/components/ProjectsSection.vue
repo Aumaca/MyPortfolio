@@ -9,9 +9,8 @@ defineProps({
 })
 </script>
 
-<!-- Projects -->
 <template>
-  <section id="projects" class="mt-10 sm:px-28 md:px-16 xl:px-28">
+  <section id="projects" class="mt-10 px-5 sm:px-28 md:px-16 xl:px-28">
     <div class="pb-5 ps-5">
       <h2 class="text-4xl text-left font-bold gradient-text title-slide">{{ $t('projects') }}</h2>
     </div>

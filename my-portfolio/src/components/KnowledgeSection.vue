@@ -61,7 +61,11 @@ import { web, database, mobile, others, languages } from '@/utils/knowledge'
     </div>
   </section>
 
-  <svg class="-mb-3 md:-mb-6 lg:-mb-10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+  <svg
+    class="-mb-6 sm:-mb-10 md:-mb-12 lg:-mb-16 xl:-mb-26"
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 1440 320"
+  >
     <path
       fill="#ffffff"
       fill-opacity="1"

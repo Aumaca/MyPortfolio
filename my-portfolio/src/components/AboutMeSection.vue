@@ -3,10 +3,7 @@ import { onMounted, watch, ref, nextTick } from 'vue'
 
 const props = defineProps({
   circles: Array,
-  currentLanguage: String,
-  changeLanguage: {
-    type: Function
-  }
+  currentLanguage: String
 })
 
 const typewriter = {
@@ -90,8 +87,9 @@ const initializeTypeWriter = async () => {
       }
     }
   }
+}
 
-  // Inject CSS (if not already injected)
+const initializeCursorBlinking = () => {
   if (!document.querySelector('#typewriter-style')) {
     const css = document.createElement('style')
     css.id = 'typewriter-style'
@@ -110,7 +108,10 @@ const initializeTypeWriter = async () => {
 }
 
 onMounted(() => {
-  initializeTypeWriter()
+  initializeCursorBlinking()
+  setTimeout(() => {
+    initializeTypeWriter()
+  }, 2000)
 })
 
 watch(
@@ -123,48 +124,45 @@ watch(
 </script>
 
 <template>
-  <!-- MAIN -->
-  <main class="h-full flex flex-col items-center w-full my-auto" id="about-me">
-    <div class="flex flex-col prose items-center my-auto gap-5 text-center mt-auto">
-      <p class="font-bold gradient-text title-slide text-8xl">
+  <main class="h-full w-full overflow-hidden my-auto flex flex-col items-center" id="about-me">
+    <!-- Picture and Typewriter -->
+    <div class="w-screen flex flex-col items-center gap-12 text-center my-auto pt-12">
+      <p class="font-bold gradient-text text-6xl tracking-in-expand">
         {{ $t('welcome') }}
       </p>
 
-      <!-- Picture and Typewriter -->
-      <div class="flex flex-col gap-12">
-        <!-- Picture -->
-        <img src="../assets/media/eu.jpg" class="w-80 rounded-full profile-pic" alt="User Image" />
+      <!-- Picture -->
+      <img src="../assets/media/eu.jpg" class="w-72 rounded-full profile-pic" alt="User Image" />
 
-        <!-- Typewriter -->
-        <p class="text-white text-xl mt-5">
-          <a class="typewrite text-3xl" data-period="1000" :key="typewriterKey">
-            <span class="wrap"></span>
-          </a>
-        </p>
-      </div>
+      <!-- Typewriter -->
+      <p class="text-white text-xl mt-5">
+        <a class="typewrite text-3xl" data-period="1000" :key="typewriterKey">
+          <span class="wrap"></span>
+        </a>
+      </p>
     </div>
 
     <div class="flex justify-between my-auto">
       <!-- Social Icons -->
       <div class="flex gap-12 mx-auto">
         <a href="https://github.com/Aumaca" target="_blank">
-          <i class="fa-brands fa-github text-white text-5xl hover:text-black"></i>
+          <i class="fa-brands fa-github text-white text-4xl hover:text-black"></i>
         </a>
         <a href="https://www.linkedin.com/in/carlos-mariano-cardoso/" target="_blank">
-          <i class="fa-brands fa-linkedin text-white text-5xl hover:text-sky-500"></i>
+          <i class="fa-brands fa-linkedin text-white text-4xl hover:text-sky-500"></i>
         </a>
         <a href="https://www.youtube.com/@_aumaca" target="_blank">
-          <i class="fa-brands fa-youtube text-white text-5xl hover:text-red-500"></i>
+          <i class="fa-brands fa-youtube text-white text-4xl hover:text-red-500"></i>
         </a>
         <a href="https://stackoverflow.com/users/19912446/c-aumaca" target="_blank">
-          <i class="fa-brands fa-stack-overflow text-white text-5xl hover:text-orange-500"></i>
+          <i class="fa-brands fa-stack-overflow text-white text-4xl hover:text-orange-500"></i>
         </a>
         <a
           href="https://judge.beecrowd.com/en/profile/878874"
           class="hover:animate-bounce"
           target="_blank"
         >
-          <img src="../assets/media/bee.png" class="w-12 h-12" alt="Bee Crowd Badge" />
+          <img src="../assets/media/bee.png" class="w-9 h-9" alt="Bee Crowd Badge" />
         </a>
       </div>
     </div>
