@@ -9,7 +9,7 @@ defineProps({
 
 <template>
   <div
-    class="fixed flex flex-col gap-3 top-1/2 transform -translate-y-1/2 ml-3 z-10 bg-white bg-opacity-70 p-3 pr-1 rounded-xl"
+    class="fixed flex flex-col gap-3 top-1/2 transform -translate-y-1/2 ml-3 z-10 bg-white bg-opacity-70 p-3 pr-1 rounded-xl slide-in"
   >
     <!-- Flag EN -->
     <div class="flex">
@@ -33,3 +33,20 @@ defineProps({
     </div>
   </div>
 </template>
+
+<style>
+.slide-in {
+  animation: slide-in 1s forwards;
+}
+
+@keyframes slide-in {
+  0% {
+    transform: translate(-100%, -100%); /* Start off-screen to the left */
+    opacity: 0; /* Start transparent */
+  }
+  100% {
+    transform: translate(0%, -100%); /* Move to its original position */
+    opacity: 1; /* Fully visible */
+  }
+}
+</style>
