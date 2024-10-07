@@ -74,7 +74,7 @@ onBeforeUnmount(() => {
 <template>
   <nav
     :class="[
-      'fixed flex items-center justify-center top-0 z-12 left-1/2 transform -translate-x-1/2 navbar-slide-down',
+      'fixed flex items-center justify-center top-0 z-20 left-1/2 transform -translate-x-1/2 navbar-slide-down',
       {
         invisible: isHidden
       }
