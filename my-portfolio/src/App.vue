@@ -1,5 +1,5 @@
 <template>
-  <div id="app" class="gradient-background">
+  <div id="app" class="background">
     <!-- Navbar -->
     <NavbarSection />
 

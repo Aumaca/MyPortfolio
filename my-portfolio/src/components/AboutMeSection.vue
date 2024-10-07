@@ -126,8 +126,8 @@ watch(
 <template>
   <main class="h-full w-full overflow-hidden my-auto flex flex-col items-center" id="about-me">
     <!-- Picture and Typewriter -->
-    <div class="w-screen flex flex-col items-center gap-12 text-center my-auto pt-12">
-      <p class="font-bold gradient-text text-6xl tracking-in-expand">
+    <div class="w-screen flex flex-col items-center gap-3 sm:gap-12 text-center my-auto pt-12">
+      <p class="font-bold gradient-text text-5xl sm:text-6xl tracking-in-expand">
         {{ $t('welcome') }}
       </p>
 
@@ -135,16 +135,16 @@ watch(
       <img src="../assets/media/eu.jpg" class="w-72 rounded-full profile-pic" alt="User Image" />
 
       <!-- Typewriter -->
-      <p class="text-white text-xl mt-5">
-        <a class="typewrite text-3xl" data-period="1000" :key="typewriterKey">
+      <p class="text-white mt-5">
+        <a class="typewrite text-xl sm:text-3xl" data-period="1000" :key="typewriterKey">
           <span class="wrap"></span>
         </a>
       </p>
     </div>
 
-    <div class="flex justify-between my-auto">
+    <div class="flex my-auto">
       <!-- Social Icons -->
-      <div class="flex gap-12 mx-auto">
+      <div class="flex gap-6">
         <a href="https://github.com/Aumaca" target="_blank">
           <i class="fa-brands fa-github text-white text-4xl hover:text-black"></i>
         </a>
