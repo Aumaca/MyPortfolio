@@ -37,7 +37,8 @@ onMounted(() => {
     autoWidth: true,
     nav: false,
     controls: false,
-    autoplayButtonOutput: false
+    autoplayButtonOutput: false,
+    mouseDrag: true
   })
 })
 </script>
