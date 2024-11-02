@@ -42,8 +42,8 @@ const projects = [
     desktopImages: ['slider2/1.png'],
     mobileImages: ['slider2/1.png'],
     description: {
-      en: `My first app to be launched in Google Play Store, a digital diary app made using Flutter.\nThis project was indeed to be a complex app, with MongoDB server, images from AWS S3 server, login through a backend server and more. After I realized that the app should be simple.\nHowever, even without releasing the complex version, I did the app in the complex way using pre-signed objects for image visualization permission, login using Google, and more.`,
-      pt: `Meu primeiro aplicativo lançado na Google Play Store, um aplicativo de diário digital feito usando Flutter.\nEste projeto deveria ser um aplicativo complexo, com servidor MongoDB, imagens no servidor AWS S3, login através de um servidor backend e mais. Depois percebi que o aplicativo deveria ser simples.\nNo entanto, mesmo sem lançar a versão complexa, fiz o aplicativo da maneira complexa, usando objetos pré-assinados para permissão de visualização de imagens, login usando Google e mais.`
+      en: `My first app (that I would like to publish in Google Play Store, but due the Google policies to indie developers I couldn't do it) a digital diary app made using Flutter.\nThis project was indeed to be a complex app, with MongoDB server, images from AWS S3 server, login through a backend server and more. After I realized that the app should be simple.\nHowever, even without releasing the complex version, I did the app in the complex way using pre-signed objects for image visualization permission, login using Google, and more.`,
+      pt: `Meu primeiro aplicativo (que eu gostaria de publicar na Google Play Store, porém, infelizmente às políticas do Google para desenvolvedores indie, não pude publicar) de diário digital feito com Flutter.\nEste projeto deveria ser um aplicativo complexo, com servidor MongoDB, imagens no servidor AWS S3, login através de um servidor backend e mais. Depois percebi que o aplicativo deveria ser simples.\nNo entanto, mesmo sem lançar a versão complexa, fiz o aplicativo da maneira complexa, usando objetos pré-assinados para permissão de visualização de imagens, login usando Google e mais.`
     }
   },
   {
@@ -60,6 +60,44 @@ const projects = [
     description: {
       en: `I developed a basic Truth Table Generator that constructs truth tables for AND, OR, conditional, and negation operations.\nThis project marked my first significant coding challenge, taking two weeks to complete.\nI utilized object-oriented programming principles to enhance code readability and organization.`,
       pt: `Eu desenvolvi um gerador básico de Tabelas Verdade que constrói tabelas para operações de AND, OR, condicional e negação.\nEste projeto marcou meu primeiro desafio significativo de programação, levando duas semanas para ser concluído.\nEu utilizei princípios de programação orientada a objetos para melhorar a legibilidade e organização do código.`
+    }
+  },
+  {
+    name: 'César Contador Website',
+    url: 'https://cesarcontador.netlify.app/',
+    badges: [
+      'https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white',
+      'https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white',
+      'https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black',
+      'https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vue.js&logoColor=4FC08D',
+      'https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white',
+      'https://img.shields.io/badge/Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white',
+      'https://img.shields.io/badge/Sanity-E34F26?style=for-the-badge'
+    ],
+    desktopImages: [
+      'slider8/1.png',
+      'slider8/2.png',
+      'slider8/3.png',
+      'slider8/4.png',
+      'slider8/5.png',
+      'slider8/6.png',
+      'slider8/7.png'
+    ],
+    mobileImages: [
+      'slider8/8.png',
+      'slider8/9.png',
+      'slider8/10.png',
+      'slider8/11.png',
+      'slider8/12.png',
+      'slider8/13.png',
+      'slider8/14.png',
+      'slider8/15.png',
+      'slider8/16.png',
+      'slider8/17.png'
+    ],
+    description: {
+      en: "I developed a modern website for an accountant looking for a flexible online presence with easy content management.\nUsing Vue.js, Sanity CMS, HTML, CSS, and Tailwind, I built an intuitive platform that's simple to update. The Sanity CMS allows for seamless content management, while the responsive design ensures a smooth experience across devices.\nInitially, I considered WordPress, but Sanity offered a streamlined, modern solution with real-time content editing and data hosting.",
+      pt: 'Desenvolvi um site moderno para um contador que buscava uma presença online flexível e com gerenciamento de conteúdo facilitado.\nUtilizando Vue.js, Sanity CMS, HTML, CSS e Tailwind, construí uma plataforma intuitiva e fácil de atualizar. O Sanity CMS permite um gerenciamento de conteúdo simplificado, enquanto o design responsivo garante uma experiência fluida em diversos dispositivos.\nInicialmente, considerei WordPress, mas o Sanity ofereceu uma solução mais enxuta e moderna, com edição de conteúdo em tempo real e hospedagem de dados.'
     }
   },
   {
@@ -82,7 +120,7 @@ const projects = [
     name: 'Shell Password Manager',
     url: 'https://github.com/Aumaca/Shell-Password-Manager',
     badges: [
-      'https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=whitek',
+      'https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white',
       'https://img.shields.io/badge/SQLite-07405E?style=for-the-badge&logo=sqlite&logoColor=white'
     ],
     desktopImages: [
