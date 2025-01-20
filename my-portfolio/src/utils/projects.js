@@ -45,7 +45,7 @@ const projects = [
       en: `My first app (that I would like to publish in Google Play Store, but due the Google policies to indie developers I couldn't do it) a digital diary app made using Flutter.\nThis project was indeed to be a complex app, with MongoDB server, images from AWS S3 server, login through a backend server and more. After I realized that the app should be simple.\nHowever, even without releasing the complex version, I did the app in the complex way using pre-signed objects for image visualization permission, login using Google, and more.\nYou can download the APK file clicking here.`,
       pt: `Meu primeiro aplicativo (que eu gostaria de publicar na Google Play Store, porém, infelizmente às políticas do Google para desenvolvedores indie, não pude publicar) de diário digital feito com Flutter.\nEste projeto deveria ser um aplicativo complexo, com servidor MongoDB, imagens no servidor AWS S3, login através de um servidor backend e mais. Depois percebi que o aplicativo deveria ser simples.\nNo entanto, mesmo sem lançar a versão complexa, fiz o aplicativo da maneira complexa, usando objetos pré-assinados para permissão de visualização de imagens, login usando Google e mais.`
     },
-    file: 'files/MyNikki.apk'
+    file: 'https://drive.google.com/file/d/17tDMulySmvqJeyRw0pyUH_cT41MxtrEC/view?usp=sharingk'
   },
   {
     name: 'Truth Table Generator',

@@ -104,14 +104,14 @@ onMounted(() => {
 
       <!-- Download APK -->
       <div v-if="project.file" class="pt-3 w-fit">
-        <a :href="project.file" download>
+        <a :href="project.file" target="_blank">
           <button class="bg-green-500 p-3 rounded">
-            <p class="flex gap-3 items-center font-bold text-white">
-              Download APK
+            <p class="flex items-center font-bold text-white">
+              Download APK <span class="text-xs px-1 pe-4">(Google Drive)</span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
+                width="24"
+                height="24"
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
