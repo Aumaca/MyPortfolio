@@ -101,6 +101,33 @@ onMounted(() => {
         <p>{{ paragraph }}</p>
         <br v-if="index !== project.description.en.split('\n').length - 1" />
       </template>
+
+      <!-- Download APK -->
+      <div v-if="project.file" class="pt-3 w-fit">
+        <a :href="project.file" download>
+          <button class="bg-green-500 p-3 rounded">
+            <p class="flex gap-3 items-center font-bold text-white">
+              Download APK
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                style="vertical-align: middle; margin-right: 5px"
+              >
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+              </svg>
+            </p>
+          </button>
+        </a>
+      </div>
     </div>
   </div>
 </template>
