@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carlos' Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="./layers.png" />
+    <meta name="theme-color" content="#255bff" />
+
+    <!-- Devicon -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
+    />
+
+    <!-- Tiny-Slider CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css"
+    />
+
+    <!-- FontAwesome Icons -->
+    <script src="https://kit.fontawesome.com/5d5652b939.js" crossorigin="anonymous"></script>
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              darkBlack: '#080808',
+              darkBlue: '#1A1D3A',
+              mediumBlue: '#2A2E5B',
+              softBlue: '#4A4F7E',
+              lightGray: '#D1D1D1'
+            },
+            fontFamily: {
+              poppins: ['Poppins', 'sans-serif']
+            }
+          }
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>
