@@ -1,5 +1,39 @@
 const projects = [
   {
+    name: 'Evamo - Pump Technology Solutions: Digital Catalog',
+    url: 'https://evamo-aftermarket.com.br/',
+    badges: [
+      'https://img.shields.io/badge/Dart-%230175C2.svg?logo=dart&logoColor=white',
+      'https://img.shields.io/badge/Flutter-02569B?logo=flutter&logoColor=fff',
+      'https://img.shields.io/badge/Supabase-3FCF8E?logo=supabase&logoColor=fff',
+      'https://img.shields.io/badge/Postgres-%23316192.svg?logo=postgresql&logoColor=white',
+      'https://img.shields.io/badge/Netlify-%23000000.svg?logo=netlify&logoColor=#00C7B7',
+      'https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=fff',
+      'https://img.shields.io/badge/Pandas-150458?logo=pandas&logoColor=fff',
+      'https://img.shields.io/badge/Android-3DDC84?logo=android&logoColor=white',
+      'https://img.shields.io/badge/Provider-Flutter-blue'
+    ],
+    desktopImages: [
+      'slider9/1.png',
+      'slider9/2.png',
+      'slider9/3.png',
+      'slider9/4.png',
+      'slider9/5.png'
+    ],
+    mobileImages: [
+      'slider9/6.png',
+      'slider9/7.png',
+      'slider9/8.png',
+      'slider9/9.png',
+      'slider9/10.png',
+      'slider9/11.png'
+    ],
+    description: {
+      en: `This project was developed for the multinational company Evamo - Pump Technology Solutions.\nGiven the need to create an intuitive and easily accessible online catalog for the company’s products, this system was developed, allowing for the search and detailed viewing of sets, components, and repair kits for the pump solutions offered by the company. The catalog features filters and relationships between products, making navigation and searching for specific items easier.`,
+      pt: `Este é um projeto criado para a empresa multinacional Evamo - Pump Technology Solutions.\nDiante a necessidade da criação de um catálogo online de fácil uso e acesso aos produtos da empresa, foi desenvolvido este catálogo, que possibilita a pesquisa e visualização de detalhes de conjuntos, componentes e jogos de reparo das soluções de bombas providas pela empresa, através de filtros e relações entre os produtos.`
+    }
+  },
+  {
     name: 'AnimeRank',
     url: 'https://aumaca-animerank.vercel.app/',
     badges: [
